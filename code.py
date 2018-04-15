@@ -16,6 +16,8 @@ print("Hello " + name.lower())
 number_of_games = int(input("How many games do you want to play? "))
 moves = ['paper', 'scissors', 'rock']
 
+human_counter = 0
+computer_counter = 0
 for i in range(number_of_games):
 	computer_move = random.choice(moves)
 	human_move = input("What is your next move? scissors, paper or rock? ")
@@ -28,17 +30,33 @@ for i in range(number_of_games):
 
 	if computer_move == "paper" and human_move == "scissors":
 		print("Human won the round!")
+		human_counter += 1
 	elif computer_move == "paper" and human_move == "rock":
 		print("Computer won the round!")
+		computer_counter += 1
 	elif computer_move == "scissors" and human_move == "rock":
 		print("Human won the round!")
+		human_counter += 1
 	elif computer_move == "scissors" and human_move == "paper":
 		print("Computer won the round!")
+		computer_counter += 1
 	elif computer_move == "rock" and human_move == "paper":
 		print("Human won the round!")
+		human_counter += 1
 	elif computer_move == "rock" and human_move == "scissors":
 		print("Computer won the round!")
+		computer_counter += 1
 	else:
 		print("Both played the same move")
 
 print("GAME OVER!")
+print("Human won " + human_counter + games)
+print("Computer won " + str(computer_counter) + "games")
+
+if computer_counter > human_counter:
+	winner = "Computer"
+else:
+	winner = "Human"
+
+print(winner + " is the winner!!")
+
