@@ -13,10 +13,10 @@ print("------------\n")
 
 name = input("What is your name? ")
 print("Hello " + name.lower())
-
+number_of_games = int(input("How many games do you want to play? "))
 moves = ['paper', 'scissors', 'rock']
 
-while True:
+for i in range(number_of_games):
 	computer_move = random.choice(moves)
 	human_move = input("What is your next move? scissors, paper or rock? ")
 
@@ -40,3 +40,5 @@ while True:
 		print("Computer won the round!")
 	else:
 		print("Both played the same move")
+
+print("GAME OVER!")
