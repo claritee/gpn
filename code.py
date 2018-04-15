@@ -20,7 +20,10 @@ human_counter = 0
 computer_counter = 0
 for i in range(number_of_games):
 	computer_move = random.choice(moves)
-	human_move = input("What is your next move? scissors, paper or rock? ")
+	human_move = input("What is your next move? scissors, paper or rock? ").lower()
+
+	if (human_move in moves) == False:
+		human_move = input("That was incorrect. What is your next move? scissors, paper or rock? ").lower()
 
 	print("Computer played: " + computer_move)
 	time.sleep(0.1)
@@ -50,8 +53,8 @@ for i in range(number_of_games):
 		print("Both played the same move")
 
 print("GAME OVER!")
-print("Human won " + human_counter + games)
-print("Computer won " + str(computer_counter) + "games")
+print("Human won " + str(human_counter) + " games")
+print("Computer won " + str(computer_counter) + " games")
 
 if computer_counter > human_counter:
 	winner = "Computer"
