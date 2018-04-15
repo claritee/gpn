@@ -24,3 +24,5 @@ time.sleep(0.1)
 
 if computer_move == "paper" and human_move == "scissors":
 	print("Human won the round!")
+else if computer_move == "paper" and human_move == "rock":
+	print("Computer won the round!")
