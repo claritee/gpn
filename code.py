@@ -14,10 +14,13 @@ name = input("What is your name? ")
 print("Hello " + name)
 
 computer_move = 'paper'
-move = input("What is your next move? scissors, paper or rock? ")
+human_move = input("What is your next move? scissors, paper or rock? ")
 
 print("Computer played: " + computer_move)
 time.sleep(0.1)
 
-print("Human played: " + move)
+print("Human played: " + human_move)
 time.sleep(0.1)
+
+if computer_move == "paper" and human_move == "scissors":
+	print("Human won the round!")
